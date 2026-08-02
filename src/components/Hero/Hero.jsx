@@ -1,17 +1,20 @@
 import "./Hero.css";
 import { motion } from "framer-motion";
+import profile from "../../assets/images/prajjwal.jpg";
 
 function Hero() {
   return (
     <section className="hero">
 
+      {/* LEFT */}
+
       <div className="hero-content">
 
         <motion.p
+          className="hero-subtitle"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: .6 }}
-          className="hero-subtitle"
         >
           BUILDING MODERN DIGITAL EXPERIENCES
         </motion.p>
@@ -56,10 +59,45 @@ function Hero() {
           <button className="secondary-btn">
             Download Resume
           </button>
-
         </motion.div>
 
       </div>
+
+      {/* RIGHT */}
+
+      <motion.div
+        className="hero-image"
+        initial={{ opacity: 0, x: 80 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: .8 }}
+      >
+
+        <div className="image-card">
+
+          <img
+            src={profile}
+            alt="Prajjwal Rathi"
+          />
+
+          <div className="floating-card top">
+            🚀 Open To Work
+          </div>
+
+          <div className="floating-card left">
+            ☕ Coffee Driven
+          </div>
+
+          <div className="floating-card right">
+            ⚡ Spring Boot
+          </div>
+
+          <div className="floating-card bottom">
+            💻 React
+          </div>
+
+        </div>
+
+      </motion.div>
 
     </section>
   );

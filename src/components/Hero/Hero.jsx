@@ -1,5 +1,6 @@
 import "./Hero.css";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import profile from "../../assets/images/prajjwal.jpg";
 
 function Hero() {
@@ -20,21 +21,49 @@ function Hero() {
         </motion.p>
 
         <motion.h1
+          className="hero-title"
           initial={{ opacity: 0, y: 35 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: .2, duration: .7 }}
         >
-          Prajjwal
-          <span> Rathi</span>
+           BUILDING
+          <br />
+         <span>MODERN DIGITAL</span>
+          <br />
+         EXPERIENCES
         </motion.h1>
 
-        <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: .5 }}
-        >
-          Java Full Stack Developer
-        </motion.h2>
+        <motion.div
+            className="typing"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+    >
+        <TypeAnimation
+             sequence={[
+            "Java Full Stack Developer",
+            2000,
+            "Spring Boot Developer",
+            2000,
+            "React Developer",
+            2000,
+            "Backend Engineer",
+            2000,
+      ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+        />
+        </motion.div>
+
+        <motion.h3
+            className="hero-name"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            >
+              I'm Prajjwal Rathi
+        </motion.h3>
 
         <motion.p
           className="hero-description"
@@ -42,8 +71,10 @@ function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: .8 }}
         >
-          Passionate about building scalable backend systems with Spring Boot
-          and crafting modern, responsive user interfaces using React.
+          I build secure, scalable and modern web applications using Java,
+          Spring Boot, React and MySQL. Passionate about writing clean code,
+          designing intuitive user interfaces and developing production-ready
+          software that solves real-world problems.
         </motion.p>
 
         <motion.div

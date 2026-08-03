@@ -40,6 +40,47 @@
   font-size: 2rem;
   color: #d4d4d4;
 }
+.hero-title{
+
+    font-size:clamp(4rem,8vw,7rem);
+
+    line-height:1;
+
+    font-weight:900;
+
+    letter-spacing:-3px;
+
+    margin-top:10px;
+
+}
+
+.hero-title span{
+
+    background:linear-gradient(135deg,#6366F1,#8B5CF6,#06B6D4);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+
+.typing {
+  margin-top: 25px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #d4d4d8;
+  min-height: 48px;
+}
+
+.hero-name{
+
+    margin-top:18px;
+
+    color:#d4d4d8;
+
+    font-size:1.35rem;
+
+    font-weight:500;
+
+}
 
 .hero-description {
   margin-top: 25px;

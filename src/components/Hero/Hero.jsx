@@ -86,6 +86,8 @@ function Hero() {
 
   </div>
 
+  <div className="section-divider"></div>
+
 </section>
   )
 }

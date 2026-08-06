@@ -1,173 +1,251 @@
 import "./Skills.css";
 
+import {
+  SiSpringboot,
+  SiMysql,
+  SiSupabase,
+  SiPostman,
+  SiJavascript,
+  SiHtml5,
+  SiCss,
+  SiHibernate,
+} from "react-icons/si";
+
+import { FaJava, FaReact, FaGitAlt, FaDocker } from "react-icons/fa";
+import { MdSecurity } from "react-icons/md";
+import { PiDatabaseFill } from "react-icons/pi";
+import { SiApachemaven } from "react-icons/si";
+import { LuWebhook } from "react-icons/lu";
+
 const backendSkills = [
   {
     name: "Java",
-    icon: "☕",
+    icon: <FaJava />,
   },
   {
     name: "Spring Boot",
-    icon: "🍃",
+    icon: <SiSpringboot />,
   },
   {
     name: "Spring Security",
-    icon: "🔐",
+    icon: <MdSecurity />,
   },
   {
     name: "REST APIs",
-    icon: "🌐",
+    icon: <LuWebhook />,
   },
 ];
+
 const frontendSkills = [
-    {
-        name: "React",
-        icon: "⚛️",
-    },
-    {
-        name: "Tailwind CSS",
-        icon: "🌊",
-    },
-    {
-        name: "JavaScript",
-        icon: "🟡",
-    },
-    {
-        name: "HTML & CSS",
-        icon: "📄",
-    }
+  {
+    name: "React",
+    icon: <FaReact />,
+  },
+  {
+    name: "JavaScript",
+    icon: <SiJavascript />,
+  },
+  {
+    name: "HTML5",
+    icon: <SiHtml5 />,
+  },
+  {
+    name: "CSS3",
+    icon: <SiCss />,
+  },
 ];
+
 const databaseSkills = [
-    {
-        name: "MySQL",
-        icon: "🗄️",
-    }
+  {
+    name: "MySQL",
+    icon: <SiMysql />,
+  },
+  {
+    name: "Hibernate",
+    icon: <SiHibernate />,
+  },
+  {
+    name: "Spring Data JPA",
+    icon: <PiDatabaseFill />,
+  },
+  {
+    name: "Supabase",
+    icon: <SiSupabase />,
+  },
 ];
+
 const toolsUsed = [
-    {
-        name: "Git",
-        icon: "🔧",
-    },
-    {
-        name: "Docker",
-        icon: "🐳",
-    },
-    {
-        name: "Postman",
-        icon: "📬",
-    },
-    {
-        name: "VS Code",
-        icon: "🖥️",
-    },
-    {
-        name: "IntelliJ IDEA",
-        icon: "💡",
-    },
-    {
-        name: "MySQL Workbench",
-        icon: "🛠️",
-    }
+  {
+    name: "Git",
+    icon: <FaGitAlt />,
+  },
+  {
+    name: "Docker",
+    icon: <FaDocker />,
+  },
+  {
+    name: "Postman",
+    icon: <SiPostman />,
+  },
+  {
+  name: "Maven",
+  icon: <SiApachemaven />,
+}
+
 ];
 
 function Skills() {
   return (
     <section className="skills" id="skills">
-    <div className="skills-container">
+
+      <div className="skills-heading">
+
+        <p>MY SKILLS</p>
+
+        <h2>
+          Technologies I Use to Build
+          <span> Modern Applications.</span>
+        </h2>
+
+        <h4>
+          A collection of technologies, frameworks and tools I use to
+          develop scalable, secure and responsive web applications.
+        </h4>
+
+      </div>
+
+      <div className="skills-container">
+
+        {/* Backend */}
+
         <div className="skill-category">
 
-        <h3>Backend Development</h3>
+          <h3>Backend Development</h3>
 
-    <div className="skills-grid">
+          <div className="skills-grid">
 
-  {backendSkills.map((skill)=> (
+            {backendSkills.map((skill) => (
 
-    <div 
-    key={skill.name}
-    className="skill-card">
+              <div
+                key={skill.name}
+                className="skill-card"
+              >
 
-      <span className="skill-icon">{skill.icon}</span>
+                <span className="skill-icon">
+                  {skill.icon}
+                </span>
 
-      <p className="skill-name">{skill.name}</p>
+                <p className="skill-name">
+                  {skill.name}
+                </p>
 
-    </div>
+              </div>
 
-    ))}
-            </div>
+            ))}
 
-    </div>
-            
-      <div className="skill-category">
+          </div>
 
-        <h3>Frontend Development</h3>
+        </div>
 
-    <div className="skills-grid">
+        {/* Frontend */}
 
-  {frontendSkills.map((skill)=> (
+        <div className="skill-category">
 
-    <div 
-    key={skill.name}
-    className="skill-card">
+          <h3>Frontend Development</h3>
 
-      <span className="skill-icon">{skill.icon}</span>
+          <div className="skills-grid">
 
-      <p className="skill-name">{skill.name}</p>
+            {frontendSkills.map((skill) => (
 
-    </div>
+              <div
+                key={skill.name}
+                className="skill-card"
+              >
 
-  ))}
+                <span className="skill-icon">
+                  {skill.icon}
+                </span>
 
-    </div>
+                <p className="skill-name">
+                  {skill.name}
+                </p>
 
-</div>
+              </div>
 
-    <div className="skill-category">
-        <h3>Database Skills</h3>
-    <div className="skills-grid">
+            ))}
 
-  {databaseSkills.map((skill)=> (
+          </div>
 
-    <div 
-    key={skill.name}
-    className="skill-card">
+        </div>
 
-      <span className="skill-icon">{skill.icon}</span>
+        {/* Database */}
 
-      <p className="skill-name">{skill.name}</p>
+        <div className="skill-category">
 
-    </div>
+          <h3>Database & Cloud</h3>
 
-  ))}
+          <div className="skills-grid">
 
-    </div>
+            {databaseSkills.map((skill) => (
 
-</div>
+              <div
+                key={skill.name}
+                className="skill-card"
+              >
 
-    <div className="skill-category">
-        <h3>Tools & Technologies</h3>
-    <div className="skills-grid">
+                <span className="skill-icon">
+                  {skill.icon}
+                </span>
 
-  {toolsUsed.map((skill)=> (
+                <p className="skill-name">
+                  {skill.name}
+                </p>
 
-    <div 
-    key={skill.name}
-    className="skill-card">
+              </div>
 
-      <span className="skill-icon">{skill.icon}</span>
+            ))}
 
-      <p className="skill-name">{skill.name}</p>
+          </div>
 
-    </div>
+        </div>
 
-  ))}
+        {/* Tools */}
 
-    </div>
-    </div>
-    </div>
+        <div className="skill-category">
 
-</section>
-    
-  )
-  };
-  
+          <h3>Tools & Technologies</h3>
+
+          <div className="skills-grid">
+
+            {toolsUsed.map((skill) => (
+
+              <div
+                key={skill.name}
+                className="skill-card"
+              >
+
+                <span className="skill-icon">
+                  {skill.icon}
+                </span>
+
+                <p className="skill-name">
+                  {skill.name}
+                </p>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div className="section-divider"></div>
+
+    </section>
+  );
+}
 
 export default Skills;

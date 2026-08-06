@@ -4,6 +4,7 @@ import Aurora from "../../components/Aurora/Aurora";
 import MouseGlow from "../../components/mouseGlow/mouseGlow";
 import About from "../../components/About/About";
 import Skills from "../../components/Skills/Skills";
+import Projects from "../../components/Projects/Projects";
     
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Hero />
       <About />
       <Skills />
+      <Projects />
       <MouseGlow />
       <Aurora />
     </>

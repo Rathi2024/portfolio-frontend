@@ -13,7 +13,7 @@ const container = {
 const item = {
   hidden: {
     opacity: 0,
-    y: 30,
+    y: 40,
   },
   show: {
     opacity: 1,
@@ -24,16 +24,39 @@ const item = {
   },
 };
 
+const leftContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const leftItem = {
+  hidden: {
+    opacity: 0,
+    y: 25,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
+};
+
 function About() {
   return (
     <section className="about" id="about">
 
       <motion.div
-        className="about-heading"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: .7 }}
-        viewport={{ once: true }}
+      className="about-left"
+       initial="hidden"
+      whileInView="show"
+      variants={leftContainer}
+      viewport={{ once: true }}
       >
 
         <p>ABOUT ME</p>
@@ -55,28 +78,30 @@ function About() {
           viewport={{ once: true }}
         >
 
-         <p>
-I'm <strong>Prajjwal Rathi</strong>, a Java Full Stack Developer who enjoys
-building scalable backend systems and modern web applications with clean,
-maintainable code.
-         </p>
+         <motion.p variants={leftItem}>
+          I'm <strong>Prajjwal Rathi</strong>, a Java Full Stack Developer who enjoys
+          building scalable backend systems and modern web applications with clean,
+          maintainable code.
+         </motion.p>
 
-         <p>
-My expertise includes <strong>Java, Spring Boot, React, MySQL</strong>,
-REST APIs and modern UI development. I enjoy transforming ideas into
-production-ready software with responsive design and scalable architecture.
-         </p>
+         <motion.p variants={leftItem}>
+          My expertise includes <strong>Java, Spring Boot, React, MySQL</strong>,
+          REST APIs and modern UI development. I enjoy transforming ideas into
+          production-ready software with responsive design and scalable architecture.
+         </motion.p>
 
-        <p>
+        <motion.p variants={leftItem}>
          I'm currently seeking an opportunity where I can contribute to meaningful
          projects, collaborate with experienced developers and continue growing as
          a Software Engineer.
-        </p>
-         <div className="about-quote">
-         "Clean code isn't just about syntax — it's about creating software people enjoy using."
-         </div>
+        </motion.p>
 
-        </motion.div>
+         <motion.div 
+         className="about-quote"
+         variants={leftItem}>
+         "Clean code isn't just about syntax — it's about creating software people enjoy using."
+         </motion.div>
+         </motion.div>
 
         <motion.div
           className="about-right"
@@ -88,39 +113,63 @@ production-ready software with responsive design and scalable architecture.
 
           <motion.div 
            className="about-card"
-            variants={item}>
+            variants={item}
+            whileHover={{
+                y:-8,
+                scale:1.02,
+            }}>
             <h3>Education</h3>
             <p>B.Tech CSE (AI & ML)</p>
             <span>2022 – 2026</span>
           </motion.div>
 
           <motion.div className="about-card"
-            variants={item}>
+            variants={item}
+            whileHover={{
+                y:-8,
+                scale:1.02,
+            }}>
             <h2>5+</h2>
             <p>Projects Built</p>
           </motion.div>
 
            <motion.div className="about-card"
-            variants={item}>
+            variants={item}
+            whileHover={{
+                y:-8,
+                scale:1.02,
+            }}>
              <h2>2026</h2>
              <p>Graduation</p>
            </motion.div>
 
          <motion.div className="about-card"
-            variants={item}>
+            variants={item}
+            whileHover={{
+                y:-8,
+                scale:1.02,
+            }}>
              <h2>Open</h2>
             <p>To Work</p>
               </motion.div>
 
           <motion.div className="about-card"
-            variants={item}>
+            variants={item}
+            whileHover={{
+                y:-8,
+                scale:1.02,
+            }}>
             <h3>Current Goal</h3>
             <p>Java Full Stack Developer</p>
             <span>Open to Work</span>
           </motion.div>
 
           <motion.div className="about-card"
-            variants={item}>
+            variants={item}
+            whileHover={{
+                y:-8,
+                scale:1.02,
+            }}>
             <h3>Location</h3>
             <p>Noida</p>
             <span>Uttar Pradesh, India</span>

@@ -7,7 +7,15 @@ function Hero() {
   return (
     <section className="hero">
 
-  <div className="hero-content">
+  <motion.div
+     className="hero-content"
+     initial={{ opacity: 0, y: 50 }}
+     animate={{ opacity: 1, y: 0 }}
+     transition={{
+     duration: 0.8,
+     ease: "easeOut",
+     }}
+    >
 
     <p className="hero-subtitle">
       BUILDING MODERN DIGITAL EXPERIENCES
@@ -22,7 +30,22 @@ function Hero() {
     </h1>
 
     <div className="typing">
-      Java Full Stack Developer
+  <TypeAnimation
+    sequence={[
+      "Java Full Stack Developer",
+      2000,
+      "Spring Boot Developer",
+      2000,
+      "Backend Enthusiast",
+      2000,
+      "Problem Solver",
+      2000,
+    ]}
+    wrapper="span"
+    speed={50}
+    repeat={Infinity}
+    cursor={true}
+  />
     </div>
 
     <h3 className="hero-name">
@@ -37,19 +60,57 @@ function Hero() {
 
     <div className="hero-buttons">
 
-      <button className="primary-btn">
-        View Projects
-      </button>
+     <motion.a
+     href="#projects"
+     className="primary-btn"
+     whileHover={{
+     scale: 1.05,
+    }}
+     whileTap={{
+     scale: 0.95,
+     }}
+     >
+     View Projects →
+    </motion.a>
 
-      <button className="secondary-btn">
-        Download Resume
-      </button>
+      <motion.button
+       className="secondary-btn"
+       whileHover={{
+         scale: 1.05,
+       }}
+       whileTap={{
+         scale: 0.95,
+       }}
+       >
+       Download Resume
+       </motion.button>
 
     </div>
 
-  </div>
+  </motion.div>
 
-  <div className="hero-image">
+  <motion.div
+  className="hero-image"
+  initial={{ opacity: 0, x: 80 }}
+  animate={{
+    opacity: 1,
+    x: 0,
+    y: [0, -8, 0],
+  }}
+  transition={{
+    opacity: {
+      duration: 0.8,
+    },
+    x: {
+      duration: 0.8,
+    },
+    y: {
+      duration: 4,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  }}
+>
 
     <div className="developer-card">
 
@@ -72,19 +133,47 @@ function Hero() {
 
       <div className="tech-stack">
 
-        <span>☕ Java</span>
+        <motion.span
+          whileHover={{
+            y: -4,
+            scale: 1.05,
+          }}
+        >
+          ☕ Java
+        </motion.span>
 
-        <span>⚡ Spring Boot</span>
+        <motion.span
+          whileHover={{
+            y: -4,
+            scale: 1.05,
+          }}
+        >
+          ⚡ Spring Boot
+        </motion.span>
 
-        <span>💻 React</span>
+        <motion.span
+          whileHover={{
+            y: -4,
+            scale: 1.05,
+          }}
+        >
+          💻 React
+        </motion.span>
 
-        <span>🗄 MySQL</span>
+        <motion.span
+          whileHover={{
+            y: -4,
+            scale: 1.05,
+          }}
+        >
+          🗄 MySQL
+        </motion.span>
 
       </div>
 
     </div>
 
-  </div>
+  </motion.div>
 
 </section>
   )
